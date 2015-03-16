@@ -1,0 +1,16 @@
+Name: Computer Grapher
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1993
+Language: Spanish
+Platform: MSX2
+Category: Utilities / Math
+
+Controls:
+
+Menu-driven
+
+Description:
+
+Computer Grapher is a function graphing program originally created to help with algebra and trigonometry homework. It will represent first and second-degree polynomial functions as well as any function that can be expressed in MSX BASIC. It uses a rather cheesy self-modifying code hack to easily leverage MSX BIOS' math support.
+
+In addition to the menu-driven program, there is also a simpler interactive version that was written to be executed using MSX KUN BASIC, which makes computations significantly faster. To run this version, which also performs faux 3D rendering of functions, use the 'call run' command with graph250.bas after running loading KUN BASIC by executing grapher1.bin and grapher2.bin using bload "file",r.

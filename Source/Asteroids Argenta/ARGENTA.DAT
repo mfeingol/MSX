@@ -1,0 +1,17 @@
+1 ' fighter right
+2 'FOR PP=1 TO 4:COPY (50,PP*9+27)-(57,PP*9+34),1 TO (0,PP*15),0:NEXT PP
+3 ' fighter left
+4 'FOR PP=1 TO 4:COPY (50,PP*9+63)-(57,PP*9+70),1 TO (20,PP*15),0:NEXT PP
+5 ' fighter down
+6 'FOR PP=1 TO 4:COPY (50,PP*9+99)-(57,PP*9+106),1 TO (40,PP*15),0:NEXT PP
+7 ' fighter up
+8 'FOR PP=1 TO 4:COPY(50,PP*9-9)-(57,PP*9-2),1 TO (60,PP*15),0:NEXT PP
+9 ' miner
+10 'FOR PP=1 TO 4:COPY(0,PP*9+35)-(7,PP*9+42),1 TO (80,PP*15),0:NEXT PP
+11 ' loaded miner
+12 'FOR PP=1 TO 4:COPY (0,PP*9+71)-(7,PP*9+78),1 TO (100,PP*15),0:NEXT PP
+13 ' starbase
+14 'FOR PP=1 TO 4:COPY (0,PP*9)-(7,PP*9+7),1 TO (120,PP*15),0:NEXT PP
+15 ' asteroid
+16 'COPY (0,0)-(7,7),1 TO (140,15),0
+

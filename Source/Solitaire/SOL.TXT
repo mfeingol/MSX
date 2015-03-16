@@ -1,0 +1,23 @@
+Name: Solitaire
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1993
+Language: Spanish
+Platform: MSX2
+Category: Games / Puzzle
+
+Controls:
+
+Cursors to move the cursor
+Space to select a stone
+Escape to quit
+F1 to load from disk
+F2 to save to disk
+F3 to load from memory
+F4 to save to memory
+F5 to take back a move
+F10 (shift-F5) to advance a move
+1/2 to confirm / cancel selections
+
+Description:
+
+Solitaire is an implementation of a chinese solitaire game in which the obiective is to clear a clear a playing board of stones by having one jump over another until only one stone remains in the center. The game is somewhat challenging and made for decent entertainment in the '90s. Graphics for the game were borrowed from the MSX2 version of Columns. Thanks, Sega (and sorry).

@@ -1,0 +1,24 @@
+Name: Computer Images
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1992
+Language: Spanish
+Platform: MSX2
+Category: Games / Puzzle
+
+Controls:
+
+Cursors to move the tiles
+Space to view the completed image
+F1 to save a game
+F2 to load a game
+F3 to save a game in memory
+F4 to load a game in memory
+F5 to quit
+
+1 / 2 to confirm / cancel options
+
+Description:
+
+Computer Images is a classic tile re-arrangement puzzle game that uses images from popular MSX2 games (sorry - it seemed like a good idea at the time). The game provides save/load options as well as a high-score file that records the names of players who completed specific images. MSX KUN BASIC is used to accelerate the tile movement, which is nice and smooth.
+
+There is a cheat to see the end of the game, which is pretty cute.

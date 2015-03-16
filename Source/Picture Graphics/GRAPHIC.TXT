@@ -1,0 +1,14 @@
+Name: Picture Graphics
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1992
+Language: Spanish
+Platform: MSX2
+Category: Utilities / Graphics
+
+Controls:
+
+Cursors, spacebar
+
+Description:
+
+Picture Graphics is a collection of twelve original images ('art') created using Philips Ease during a moment of weakness in which Videographics' image multiplier seemed cool.  The 'artist' obviously never expected the world wide web to make similar images popular in years to come.

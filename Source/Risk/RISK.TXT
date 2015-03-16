@@ -1,0 +1,21 @@
+Name: Risk
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1994
+Language: Spanish
+Platform: MSX2
+Category: Games / Simulation
+
+Controls:
+
+Cursors to control menus and on-screen cursor
+Spacebar to select various things
+F1 - F4 as indicated by menu system
+S / N to confirm / cancel menu selections
+
+Description:
+
+Risk is an implementation of the well-known multi-player board game Risk. It includes allied nations and attempts to remain faithful to the basic rules of Risk. The game is controlled using a nice windowed menu system that provides save/load functionality. Players can choose their names and define their colors using an innovative (for its time) color picker.
+
+CTRL must be pressed at boot to free up enough memory for the game to work.
+
+This MSX2 version does not provide an AI player. The speed of the game menus is a bit off on an (emulated) Turbo-R in R800 mode.

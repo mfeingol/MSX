@@ -1,0 +1,148 @@
+10 ' лллллллллллллллллл
+20 ' лл DIBUJAR MENU лл
+30 ' лллллллллллллллллл
+40 DIM PL$(4),L(4)
+50 SCREEN 4:COLOR 15,0,0:CLS:FOR I=1 TO 15:COLOR=(I,0,0,0):NEXT I
+60 LINE(0,0)-(255,191),14,B:LINE(1,1)-(254,190),14,B
+70 CLOSE:OPEN"GRP:"AS1:GOSUB 80:GOTO 90
+80 RESTORE 330:FOR I=1 TO 5:READ A$,Y,L,C:COLOR C:FOR X=52+L TO 51+L STEP -1:PRESET(X,Y):PRINT#1,A$:NEXT X,I:LINE(75,26)-(176,40),15,B:RETURN
+90 FOR I=1 TO 7:FOR N=1 TO 4:COLOR=(N,0,0,I):NEXT N:COLOR=(14,I,0,0):COLOR=(15,0,I,0):IF I<3 THEN COLOR=(0,0,0,I)
+100 FOR N=1 TO 5:NEXT N,I
+110 ' ллллллллллллллллллл
+120 ' лл ELEGIR OPCION лл
+130 ' ллллллллллллллллллл
+140 A$=INPUT$(1):IF A$=CHR$(27) THEN COLOR 15,0,0:END
+150 A=VAL(A$):IF A<1 OR A>4 THEN 140 ELSE COLOR=(A,7,0,0):FOR N=1 TO 200:NEXT N
+160 ON A GOTO 240,240,240,200
+170 ' ллллллллллл
+180 ' лл JUGAR лл
+190 ' ллллллллллл
+200 LINE(5,50)-(250,185),0,BF:GOTO 1060
+210 ' ллллллллллллллллллллллллллл
+220 ' лл INTRODUCCION Y TECLAS лл
+230 ' ллллллллллллллллллллллллллл
+240 LINE(5,5)-(250,185),0,BF:IF A=1 THEN J=0:RESTORE 380 ELSE IF A=2 THEN J=0:RESTORE 640 ELSE J=1:RESTORE 900
+250 FOR I=1 TO 13:COLOR=(I,0,0,2):NEXT I:FOR I=1 TO 13:READ A$:COLOR I:FOR X=13 TO 12 STEP -1:PRESET(X,I*13+1):PRINT#1,A$:NEXT X
+260 FOR X=3 TO 7:COLOR=(I,0,0,X):FOR Y=1 TO 18:NEXT Y,X,I:A$=INPUT$(1)
+270 IF J=0 THEN J=1:LINE(5,5)-(250,185),0,BF:GOTO 250
+280 LINE(5,5)-(250,185),0,BF:FOR I=1 TO 4:COLOR=(I,0,0,2):NEXT I:COLOR=(15,0,0,2):GOSUB 80:K=2:FOR I=3 TO 7:J=I-2:FOR N=1 TO 4:COLOR=(N,0,0,I):NEXT N:COLOR=(15,0,J,K):IF I<5 THEN K=K-1
+290 NEXT I:GOTO 140
+300 ' ллллллллллллллллллл
+310 ' лл DATOS DE MENU лл
+320 ' ллллллллллллллллллл
+330 DATA ELIGE OPCION,30,28,15
+340 DATA 1-AMBIENTACION,76,17,1,2-INSTRUCCIONES,101,17,2,3-DEDICATORIA,126,17,3,4-JUGAR,151,17,4
+350 ' ллллллллллллллллллллллллллл
+360 ' лл TEXTO DE INTRODUCCION лл
+370 ' ллллллллллллллллллллллллллл
+380 DATA "   En un mundo muy distinto"
+390 DATA "al nuestro, se ha descubierto"
+400 DATA "una galaxia paralela a la VЁa"
+410 DATA "L ctea, repleta de asteroides"
+420 DATA "cargados de un valioso metal"
+430 DATA "llamado argenta. Parecido a"
+440 DATA "la plata, este metal tiene"
+450 DATA "una facilidad de manejo y"
+460 DATA "dureza increЁble, por lo que"
+470 DATA "todas las potencias de la VЁa"
+480 DATA "L ctea han establecido bases"
+490 DATA "estelares en la nueva galaxia"
+500 DATA "para realizar su extracciЂn."
+510 DATA "   Sin embargo, el conflicto"
+520 DATA "ya existente entre las"
+530 DATA "potencias en nuestra galaxia"
+540 DATA "hizo que estallara una guerra"
+550 DATA "sin cuartel por la posesiЂn"
+560 DATA "de la argenta."
+570 DATA "   Tu objetivo, como general"
+580 DATA "de la flota de tu planeta, es"
+590 DATA "el de eliminar las potencias"
+600 DATA "rivales y conseguir la supre-"
+610 DATA "macЁa en la nueva galaxia."
+620 DATA
+630 DATA "       PULSA UNA TECLA"
+640 DATA "   La idea de este juego es"
+650 DATA "muy sencilla: coger con las"
+660 DATA "naves mineras el mayor nЃmero"
+670 DATA "de asteroides posibles, y"
+680 DATA "fabricar con ellos m s naves,"
+690 DATA "o mineros, con capacidad para"
+700 DATA "coger asteroides, y con un"
+710 DATA "movimiento de un cuadro por"
+720 DATA "jugada; o cazas, que pueden"
+730 DATA "disparar misiles de uno a"
+740 DATA "cinco cuadros de recorrido, y"
+750 DATA "que se desplazan tres cuadros"
+760 DATA "por jugada."
+770 DATA "   Pueden jugar hasta cuatro"
+780 DATA "jugadores a la vez. El juego"
+790 DATA "acaba cuando sЂlo queda uno"
+800 DATA "de los jugadores con naves en"
+810 DATA "el tablero o en la base este-"
+820 DATA "lar. El juego se lleva a cabo"
+830 DATA "mediante un sencillo sistema"
+840 DATA "de menus, y los cursores sЂlo"
+850 DATA "se usan para mover las naves."
+860 DATA
+870 DATA
+880 DATA
+890 DATA "       PULSA UNA TECLA"
+900 DATA "   Este programa se lo dedico"
+910 DATA "a todos aquellos que progra-"
+920 DATA "man y crean nuevas cosas para"
+930 DATA "su ordenador, y no sЂlo se"
+940 DATA "gastan su tiempo jugando a"
+950 DATA "los videojuegos..."
+960 DATA
+970 DATA
+980 DATA
+990 DATA
+1000 DATA
+1010 DATA
+1020 DATA "       PULSA UNA TECLA"
+1030 ' ллллллллллллллллллллллллллллллллллл
+1040 ' лл NUMERO DE JUGADORES Y NOMBRES лл
+1050 ' ллллллллллллллллллллллллллллллллллл
+1060 COLOR 2:FOR I=2 TO 5:COLOR=(I,0,0,2):NEXT I:FOR I=53 TO 52 STEP-1:PRESET(I,100):PRINT#1,"ЈCUANTOS JUGADORES?":NEXT I
+1070 FOR I=101 TO 100 STEP-1:PRESET(I,125):COLOR 3:PRINT#1,"2  ";:COLOR 4:PRINT#1,"3  ";:COLOR 5:PRINT#1,"4":NEXT I
+1080 FOR I=3 TO 7:FOR N=2 TO 5:COLOR=(N,0,0,I):NEXT N,I:COLOR=(3,7,0,0):X=1
+1090 S=STICK(0):T=STRIG(0):A$=INKEY$:A=VAL(A$):X1=X:IF A$=CHR$(27) THEN COLOR=(X+2,0,0,7):GOTO 1440
+1100 IF S=3 THEN X=X1+1
+1110 IF S=7 THEN X=X1-1
+1120 IF X<1 THEN X=1 ELSE IF X>3 THEN X=3
+1130 IF A>1 AND A<5 THEN X=A-1
+1140 COLOR=(X1+2,0,0,7):COLOR=(X+2,7,0,0)
+1150 IF T=-1 THEN 1180
+1160 FOR N=1 TO 10:NEXT N
+1170 GOTO 1090
+1180 PP=X+1:LINE(5,50)-(250,185),0,BF:COLOR=(2,0,0,2)
+1190 FOR I=1 TO PP:COLOR=(3,0,0,7):COLOR 2:LINE(5,50)-(250,118),0,BF
+1200 FOR N=93 TO 92 STEP-1:PRESET(N,70):PRINT#1,"JUGADOR";I:PRESET(N-40,90):PRINT#1,"INTRODUCE TU NOMBRE":NEXT N:FOR N=3 TO 7:COLOR=(2,0,0,N):FOR J=1 TO 5:NEXT J,N:X=1:S$=""
+1210 IF X<7 THEN PRESET(92+X*8,110):PRINT#1,CHR$(249)
+1220 A$=INPUT$(1):A=ASC(A$)
+1230 IF A=8 AND X>1 THEN LINE(83+X*8,110)-(99+X*8,117),0,BF:X=X-1:S$=MID$(S$,1,X-1):GOTO 1210
+1240 IF A=27 THEN LINE(5,50)-(250,185),0,BF:GOTO 1060
+1250 IF A=13 AND X>1 THEN PL$(I)=S$:FOR N=6 TO 2 STEP -1:COLOR=(2,0,0,N):FOR J=1 TO 4:NEXT J,N,I:GOTO 1320
+1260 IF A=32 THEN 1280
+1270 IF A<33 OR A=127 OR A>191 OR X=7 THEN 1220
+1280 S$=S$+A$:X=X+1
+1290 LINE(83+X*8,110)-(91+X*8,117),0,BF
+1300 FOR N=85+X*8 TO 84+X*8 STEP -1:PRESET(N,110):PRINT#1,A$:NEXT N
+1310 GOTO 1210
+1320 LINE(5,5)-(250,185),0,BF:COLOR=(1,0,0,2)
+1330 COLOR 1:FOR I=85 TO 84 STEP-1
+1340 PRESET(I,66):PRINT#1,"CARGANDO..."
+1350 PRESET(I-12,96):PRINT#1,"LOS ASTEROIDES"
+1360 PRESET(I+4,126):PRINT#1,"DE ARGENTA"
+1370 NEXT I:FOR I=3 TO 7:COLOR=(1,0,0,I):FOR N=1 TO 10:NEXT N,I
+1380 FOR I=1 TO PP:L(I)=LEN(PL$(I)):NEXT I
+1390 J=0:POKE 50000!,PP:FOR I=1 TO PP:POKE 50000!+I,L(I):NEXT I:FOR I=1 TO PP:FOR N=1 TO L(I):J=J+1:POKE 50004!+J,ASC(MID$(PL$(I),N,1)):NEXT N,I
+1400 RUN"ARGENTA.PRG"
+1410 ' лллллллллллллллллллл
+1420 ' лл VOLVER AL MENU лл
+1430 ' лллллллллллллллллллл
+1440 LINE(5,50)-(250,180),0,BF:J=0:FOR I=1 TO 4:COLOR=(I,0,0,2):NEXT I
+1450 FOR I=1 TO 0 STEP -1:PRESET(68+I,76):COLOR 1:PRINT#1,"1-AMBIENTACION":PRESET(68+I,101):COLOR 2:PRINT#1,"2-INSTRUCCIONES":PRESET(68+I,126):COLOR 3:PRINT#1,"2-DEDICATORIA":PRESET(68+I,151):COLOR 4:PRINT#1,"4-JUGAR":NEXT I
+1460 FOR I=3 TO 7:FOR N=1 TO 4:COLOR=(N,0,0,I):NEXT N:FOR N=1 TO 10:NEXT N,I
+1470 GOTO 140
+

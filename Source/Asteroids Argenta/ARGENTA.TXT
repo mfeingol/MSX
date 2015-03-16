@@ -1,0 +1,21 @@
+Name: Asteroids Argenta
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1993
+Language: Spanish
+Platform: MSX2
+Category: Games / Simulation
+
+Controls:
+
+Cursors to control on-screen ship moves
+Spacebar to select on-screen ship moves
+F1 - F4 as indicated by menu system
+S / N to confirm / cancel menu selections
+
+Description:
+
+Asteroids Argenta is the MSX version of a board game originally designed by my brother, Elan Feingold. It consists of two to four players competing for asteroids on a two-dimensional board. Each player begins the game with a stargate and a single ship. The objective of the game is to use the asteroids to build up fleets of ships and eliminate the other players. There are two different kinds of ships: miners and fighers. Miners can move one square per turn and can be used to pick up asteroids and carry them to the stargate. Each asteroid that reaches the stargate can then be used to create a new ship. Fighters can move three squares per turn and can fire missiles that can destroy asteroids or other player's ships. The game ends when only one player has remaining ships.
+
+To see the end of the game, just create a two-player game and quit one of the players.
+
+This MSX2 version does not provide an AI player. The game would be much better if it didn't require each player to have a keyboard, but thankfully these days it's trivial to use multiple keyboards on a PC. :-P

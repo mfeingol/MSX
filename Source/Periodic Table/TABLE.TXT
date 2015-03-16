@@ -1,0 +1,17 @@
+Name: Periodic Table
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1992
+Language: Spanish
+Platform: MSX2
+Category: Utilities / Educational
+
+Controls:
+
+Cursors to move the cursor
+Space to select an element
+
+Description:
+
+Periodic Table is a rendition of the periodic table of the elements circa 1990, complete with the name of each element and its atomic number and mass. Needless to say, this was created to help with a high-school chemistry class.
+
+I don't think there's a cheat code for this one.

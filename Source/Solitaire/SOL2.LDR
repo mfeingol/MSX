@@ -1,0 +1,129 @@
+10 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+20 ' ЫЫ CONSERVAR EL MEM-SAVE ЫЫ
+30 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+40 DEFINT M,V
+50 DIM M(8,90),V(9,9)
+60 _TURBO ON (M(),V())
+70 R=50000!:FOR I=1 TO 9:FOR N=1 TO 9:V(I,N)=PEEK(R):R=R+1:NEXT N,I:FOR I=1 TO 8:FOR N=1 TO 43:M(I,N+44)=PEEK(R):R=R+1:NEXT N,I:M(0,44)=PEEK(R):V(0,0)=PEEK(R+1)
+80 IF V(0,0)<>1 THEN V(0,0)=0
+90 _TURBO OFF
+100  ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+110  ' ЫЫ PREPARAR PANTALLA ЫЫ
+120  ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+130 SCREEN 7:COLOR 15,0,0:CLS:SET ADJUST(5,4)
+140 _TURBO ON
+150 J=401.6:X=460:Y=100:FOR I=1 TO 15:COLOR=(I,0,0,0):NEXT I
+160 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+170 ' ЫЫ DIBUJAR PIRAMIDE ЫЫ
+180 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+190 LINE(255,20)-(100,210),4
+200 LINE(100,210)-(411,210),4
+210 LINE(411,210)-(255,20),4
+220 PAINT(255,115),4
+230 FOR I=30 TO 210 STEP 10:LINE(0,I)-(511,I),0:NEXT I
+240 CIRCLE(255,95),25,6
+250 PAINT(255,95),5,6
+260 CIRCLE(255,95),10,2
+270 PAINT(255,95),2
+280 CIRCLE(255,95),3,1
+290 PAINT(255,95),1
+300 LINE(255,20)-(450,135),7:LINE-(410,209),7:LINE-(255,20),7
+310 PAINT(400,110),7
+320 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+330 ' ЫЫ DIBUJAR RAYAS BLANCAS ЫЫ
+340 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+350 FOR I=200 TO 30 STEP -10:LINE(J,I)-(X,Y),0:J=J-8.2:X=X-10:Y=Y-5:NEXT I
+360 J=244:FOR I=0 TO 200 STEP 10:LINE(J,I)-(511,0),5:J=J+8:NEXT I
+370 K=266:FOR I=0 TO 200 STEP 10:LINE(K,I)-(0,0),5:K=K-8:NEXT I
+380 FOR I=0 TO 280 STEP 20:LINE(0,211)-(I,0),5:NEXT I
+390 FOR I=511 TO 231 STEP -20:LINE(511,211)-(I,0),5:NEXT I
+400 FOR I=415 TO 511 STEP 17:LINE(I,211)-(511,0),5:NEXT I
+410 FOR I=96 TO 0 STEP -17:LINE(I,211)-(0,0),5:NEXT I
+420 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+430 ' ЫЫ VISUALIZAR PANTALLA ЫЫ
+440 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+450 A=0:FOR I=1 TO 7
+460 IF I<5 THEN A=A+1
+470 COLOR=(1,I,0,0):COLOR=(2,0,0,I):COLOR=(4,I,0,0):COLOR=(5,I,I,I):COLOR=(7,A,0,0)
+480 FOR N=1 TO 300:NEXT N
+490 NEXT I
+500 FOR I=6 TO 0 STEP -1:COLOR=(1,I,0,0):FOR N=1 TO 230:NEXT N,I
+510 FOR I=1 TO 7:COLOR=(1,I,0,0):FOR N=1 TO 230:NEXT N,I:FOR I=1 TO 350:NEXT I
+520 IF INKEY$<>"" THEN 570
+530 GOTO 500
+540 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+550 ' ЫЫ BORRAR PANTALLA ЫЫ
+560 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+570 A=4:FOR I=6 TO 0 STEP -1
+580 IF I>2 THEN A=A-1
+590 COLOR=(1,I,0,0):COLOR=(2,0,0,I):COLOR=(4,I,0,0):COLOR=(5,I,I,I):COLOR=(7,A,0,0):FOR N=1 TO 300:NEXT N,I
+600 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+610 ' ЫЫ DIBUJAR MENU ЫЫ
+620 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+630 SCREEN 4:COLOR 15,0,0:FOR I=1 TO 15:COLOR=(I,0,0,0):NEXT I
+640 LINE(0,0)-(255,191),14,B:LINE(1,1)-(254,190),14,B
+650 _TURBO OFF
+660 CLOSE:OPEN"GRP:"AS1:GOSUB 670:GOTO 680
+670 RESTORE 950:FOR I=1 TO 4:READ A$,Y,L,C:COLOR C:FOR X=52+L TO 51+L STEP -1:PRESET(X,Y):PRINT#1,A$:NEXT X,I:LINE(75,26)-(176,40),15,B:RETURN
+680 FOR I=1 TO 7:FOR N=1 TO 3:COLOR=(N,0,0,I):NEXT N:COLOR=(14,I,0,0):COLOR=(15,0,I,0):IF I<3 THEN COLOR=(0,0,0,I)
+690 FOR N=1 TO 5:NEXT N,I
+700 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+710 ' ЫЫ ELEGIR OPCION ЫЫ
+720 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+730 A$=INPUT$(1):IF A$=CHR$(27) THEN COLOR 15,0,0:END
+735 A=VAL(A$):IF A<1 OR A>3 THEN 730 ELSE COLOR=(A,7,0,0):FOR N=1 TO 200:NEXT N:LINE(5,5)-(250,185),0,BF
+740 ON A GOTO 870,870,780
+750 ' ЫЫЫЫЫЫЫЫЫЫЫ
+760 ' ЫЫ JUGAR ЫЫ
+770 ' ЫЫЫЫЫЫЫЫЫЫЫ
+780 FOR I=6 TO 0 STEP -1:COLOR=(14,I,0,0):IF I<2 THEN COLOR=(0,0,0,I)
+790 FOR N=1 TO 10:NEXT N,I
+800 _TURBO ON (V(),M())
+810 R=50000!:FOR I=1 TO 9:FOR N=1 TO 9:POKE R,V(I,N):R=R+1:NEXT N,I:FOR I=1 TO 8:FOR N=1 TO 43:POKE R,M(I,N+44):R=R+1:NEXT N,I:POKE R,M(0,44):POKE R+1,V(0,0)
+820 _TURBO OFF
+830 RUN"SOL.PRG"
+840 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+850 ' ЫЫ INTRODUCCION Y TECLAS ЫЫ
+860 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+870 IF A=1 THEN RESTORE 990 ELSE RESTORE 1150
+880 FOR I=1 TO 13:COLOR=(I,0,0,2):NEXT I:FOR I=1 TO 13:READ A$:COLOR I:FOR X=13 TO 12 STEP -1:PRESET(X,I*13+2):PRINT#1,A$:NEXT X
+890 FOR X=3 TO 7:COLOR=(I,0,0,X):FOR Y=1 TO 18:NEXT Y,X,I:A$=INPUT$(1)
+900 LINE(5,5)-(250,185),0,BF:FOR I=1 TO 3:COLOR=(I,0,0,2):NEXT I:COLOR=(15,0,0,2):GOSUB 670:J=0:K=2:FOR I=3 TO 7:J=J+1:FOR N=1 TO 3:COLOR=(N,0,0,I):NEXT N:COLOR=(15,0,J,K):IF I<5 THEN K=K-1
+910 NEXT I:GOTO 730
+920 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+930 ' ЫЫ DATOS DE MENU ЫЫ
+940 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+950 DATA ELIGE OPCION,30,28,15,1-INSTRUCCIONES,80,0,1,2-TECLAS DE CONTROL,105,0,2,3-JUGAR,130,0,3
+960 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+970 ' ЫЫ TEXTO DE INTRODUCCION ЫЫ
+980 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+990 DATA "    Este juego es de origen"
+1000 DATA "chino, y consta de un tablero"
+1010 DATA "y cuarenta y cuatro fichas o"
+1020 DATA "piedras.El objetivo del juego"
+1030 DATA "es que las piedras se vayan"
+1040 DATA "saltando las unas a las otras"
+1050 DATA "hasta que sўlo quede una, que"
+1060 DATA "est‚ situada en el centro del"
+1070 DATA "tablero.                     "
+1080 DATA "    Saludos a: FKD, Ramўn C.,"
+1090 DATA "BCN, y a todos los dem s..."
+1100 DATA
+1110 DATA "       PULSA UNA TECLA"
+1120 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+1130 ' ЫЫ TEXTO DE VER TECLAS ЫЫ
+1140 ' ЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫЫ
+1150 DATA "    Las teclas de control son"
+1160 DATA "las siguientes:"
+1170 DATA "CURSORES-Mover cursor gr fico"
+1180 DATA "SPACE-Seleccionar piedra"
+1190 DATA "ESC-Abandonar"
+1200 DATA "F1-Cargar de disco"
+1210 DATA "F2-Grabar en disco"
+1220 DATA "F3-Cargar de memoria"
+1230 DATA "F4-Grabar en memoria"
+1240 DATA "F5-Retrasar jugada"
+1250 DATA "F10-Avanzar jugada"
+1260 DATA
+1270 DATA "       PULSA UNA TECLA"
+

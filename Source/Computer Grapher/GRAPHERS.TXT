@@ -1,0 +1,117 @@
+
+
+                 INSTRUCCIONES DEL PROGRAMA "COMPUTER GRAPHER"
+                 =============================================
+
+         Este  programa  sirve  para  realizar  representaciones   gr ficas
+    bidimensionales de funciones de cualquier  tipo.  Posee  dos  secciones
+    principales: la dedicada a las ecuaciones de primer y segundo  grado  y
+    la de otros tipos de funciones.
+
+    ECUACIONES DE PRIMER Y SEGUNDO GRADO
+    ====================================
+         Lo primero  es  elegir  entre  representar  una  ecuaci¢n  sola  o
+    comparar entre s¡ hasta cinco  ecuaciones  distintas.  Elegida  ya  una
+    opci¢n u otra, lo siguiente es introducir los coeficientes de las X; en
+    caso de querer representar una ecuaci¢n de primer grado, lo  £nico  que
+    hay que hacer es dejar el coeficiente de xý a cero y teclear  el  resto
+    normalmente. Despu‚s de introducir todas las ecuaciones necesarias,  el
+    programa pide la confirmaci¢n de lo tecleado, y procede  a  representar
+    la ecuaci¢n o las ecuaciones.
+
+    OTROS TIPOS DE FUNCIONES
+    ========================
+         Esta opci¢n sirve para representar funciones en general, pero  con
+    ella tambi‚n se pueden representar ecuaciones.  Lo  primero  es  elegir
+    entre una funci¢n y la comparaci¢n de varias (hasta cinco a la vez).  A
+    continuaci¢n, se procede a la introducci¢n de las mismas,  escritas  en
+    el lenguaje matem tico normal del MSX-Basic. Despu‚s  de  confirmarlos,
+    es necesario pulsar la  tecla  de  funci¢n  F1,  con  lo  que  quedar n
+    introducidas en la memoria  del  programa.  Esto  puede  resultar  algo
+    inc¢modo,  pero  estoy  convencido  de  que  es  el  mejor  sistema  de
+    introducci¢n de funciones matem ticas posible dadas las caracter¡sticas
+    del programa.
+         Pasado esto, lo £nico que queda  es  introducir  la  m xima  y  la
+    m¡nima para el eje de las X en la representaci¢n. El programa configura
+    independientemente la m xima y la m¡nima de las Y, tardando en  hacerlo
+    de unos cinco  a  quince  segundos,  dependiendo  por  supuesto  de  la
+    cantidad y la complejidad de las funciones introducidas. Con  esto,  se
+    proceder  a la representaci¢n. Una vez completada ‚sta, con pulsar  una
+    tecla se ver n  en  pantalla  las  m ximas  y  m¡nimas  de  ambos  ejes
+    cartesianos, desgraciadamente (debido a razones  de  programaci¢n)  sin
+    cifras decimales. Si ‚stas se usan en los valores  de  la  X,  s¢lo  se
+    tomar  la parte entera de los  n£meros  introducidos  (no  as¡  en  las
+    funciones, donde todo se puede introducir).
+         Un aviso: debido a la utilizaci¢n del KUN-Basic en las rutinas  de
+    las representaciones, algunas  funciones  incompletas  en  la  realidad
+    (logaritmos, arco senos,  ra¡ces  cuadradas  de  n£meros  negativos...)
+    tendr n un dominio de definici¢n de menos infinito a infinito, ya  que,
+    por poner un ejemplo, la ra¡z cuadrada de -4 es 2 en este lenguaje. Por
+    esta misma raz¢n, otras funciones que tienden al infinito en alguno  de
+    sus puntos (tangentes, por ejemplo) no se  ver n  ex ctamente  como  es
+    debido en las representaciones (habr  una raya que conecta el punto m s
+    infinito con el menos infinito, o algo as¡). En todo caso, el  programa
+    es de gran calidad, y de los pocos que existen de su tipo en MSX.
+         Una vez aclarado todo esto, creo que ser¡a £til hacer una lista de
+    las funciones matem ticas que admite el programa (las mismas,  como  ya
+    dije, que el MSX-Basic), adem s de otras derivadas (por cierto, gracias
+    a David Rubio Riera de Barcelona, autor de estas £ltimas, ya publicadas
+    en el MSX-Club n£mero 46, correspondiente a Diciembre de 1988):
+
+         COS Calcula el coseno de un  ngulo.
+         SIN Calcula el seno de un  ngulo.
+         TAN Calcula la tangente de un  ngulo.
+         LOG Calcula el logaritmo neperiano de un n£mero.
+         ATN Calcula el arcotangente de un  ngulo.
+         SQR Calcula la ra¡z cuadrada de un n£mero.
+         EXP Calcula la potencia e de un n£mero. Es la operaci¢n inversa.
+             a LOG.
+         SGN Sirve para hallar el signo de un n£mero. Si ‚ste  es  negativo
+             el resultado ser  -1, si es cero, 0 y si es positivo, 1.
+         ABS Calcula el valor absoluto de un n£mero.
+
+    NOTAS:
+         -Para hallar la ra¡z c£bica o cuarta de un  n£mero,  es  necesario
+    elevar ‚ste a 1/3 o a 1/4 y as¡ sucesivamente. Ejemplo: la  ra¡z  sexta
+    de 64 es 64^(1/6), es decir, 2.
+         -Para hallar el logaritmo decimal  de  un  n£mero,  s¢lo  hay  que
+    dividir el logaritmo neperiano del n£mero entre el logaritmo  neperiano
+    del n£mero 10 (2.3 aproximadamente). Ejemplo: el logaritmo  decimal  de
+    50 es igual a LOG 50 dividido entre LOG 10, es decir, 1.69897.
+         -En las  operaciones  trigonom‚tricas  el   ngulo,  es  decir,  la
+    variable X, siempre debe ir en radianes. Para introducirlo  en  grados,
+    cuando se teclea la funci¢n en el programa, se debe dividir todo X  por
+    el n£mero 57.29578.
+
+         Las funciones que se pueden obtener a partir de las ya  comentadas
+    son las siguientes:
+
+    Secante  1/COS(X)
+    Cosecante  1/SIN(X)
+    Cotangente  1/TAN(X)
+    Arco seno  ATN(X/SQR(-X*X+1))
+    Arco coseno  -ATN(X/SQR(-X*X-1))+1.5708
+    Arco secante  ATN(1/SQR(X*X-1)+SGN(X)-1)*1.5708
+    Arco cosecante  ATN(X/SQR(X*X-1)+SGN(X)-1)*1.5708
+    Arco cotangente  ATN(X)+1.5708
+    Seno hiperb¢lico  (EXP(X)-EXP(-X))/2
+    Coseno hiperb¢lico  (EXP(X)+EXP(-X))/2
+    Tangente hiperb¢lica  (EXP(X)-EXP(-X))/(EXP(X)+EXP(-X))
+    Secante hiperb¢lica  2/(EXP(X)+EXP(-X))
+    Cosecante hiperb¢lica  2/(EXP(X)-EXP(-X))
+    Cotangente hiperb¢lica  (EXP(X)+EXP(-X))/(EXP(X)-EXP(-X))
+    Arco seno hiperb¢lico  LOG(X+SQR(X*X+1))
+    Arco coseno hiperb¢lico  LOG(X+SQR(X*X-1))
+    Arco cotangente hiperb¢lica  LOG((1+X)/(1-X))/2
+    Arco secante hiperb¢lica  LOG((SQR(-X*X+1)+1)/X)
+    Arco cosecante hiperb¢lica  LOG((SGN(X)*SQR(X*X+1)+1)/X)
+    Arco cotangente hiperb¢lica  LOG((X+1)/(X-1))/X
+
+         Y ya para finalizar, un saludo a los que como yo  todav¡a  no  han
+    abandonado el MSX.  A  ellos  y  a  la  extinta  MSX-Club  dedico  este
+    programa.
+
+
+                             MAX FEINGOLD "ALTAIR"
+                             =====================
+

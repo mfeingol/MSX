@@ -1,0 +1,18 @@
+Name: Simon
+Author: Max Attar Feingold (Illuminatus Software)
+Year: 1993
+Language: Spanish
+Platform: MSX2
+Category: Games / Dexterity
+
+Controls:
+
+Cursors to activate colors
+
+Description:
+
+Simon is an implementation of the classic Simon says memory game, using four lights. The game consists of five phases, each of which requires a sequence of twenty colors to be correctly played back. Each phase is faster than the previous one.
+
+The game has a cute ending, which can be accessed using a cheat if memory alone does not suffice.
+
+The speed of the game menus is a bit off on an (emulated) Turbo-R in R800 mode.
